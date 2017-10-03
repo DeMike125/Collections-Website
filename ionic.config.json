@@ -1,0 +1,8 @@
+{
+  "name": "BirdsInArt40",
+  "app_id": "94c92a70",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

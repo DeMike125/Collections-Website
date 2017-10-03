@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="woodson">
+    <ion-title>
+      Birds in Art 40
+    </ion-title>
+  </ion-navbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (change)="setFilteredItems($event.target.value)"></ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="filter">
+    <button ion-item *ngFor="let item of filteredItems" (click)="itemSelected(item)">
+      {{ item["Title"] }} by {{ item["First Name"] }} {{ item["Last Name"] }}
+    </button>
+  </ion-list>
+  <ion-list *ngIf="!filter">
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item["Title"] }} by {{ item["First Name"] }} {{ item["Last Name"] }}
+    </button>
+  </ion-list>
+</ion-content>

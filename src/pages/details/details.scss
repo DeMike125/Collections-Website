@@ -1,8 +1,7 @@
 page-details {
   .artwork {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    height: auto;
+    height: 50%;
+    width: auto; /* Correct the height of the image, using width & aspect ratio. */
+    display: block; margin: 0 auto; /* Center the image inside of the container */
   }
 }

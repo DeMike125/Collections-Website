@@ -1,4 +1,4 @@
-# Birds in Art 40
+# Birds in Art
 A digital exhibition spanning forty years.
 
 ## Table of Contents
@@ -11,7 +11,7 @@ A digital exhibition spanning forty years.
 2.  Open a terminal and navigate to the root directory of the project
 3.  Run `npm install`
 4.  Install the Ionic CLI: `npm install -g ionic`
-5.  Run `ionic serve`
+5.  Run `ionic serve` to test in a web browser
 
 ## Deploying
 * PWA - Run `npm run ionic:build --prod` and then push the `www` folder to your favorite hosting service

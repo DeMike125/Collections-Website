@@ -1,0 +1,19 @@
+<!-- Item is instantiated in details.ts -->
+<!-- Contains raw data from the json, as a dictionary. -->
+<ion-header>
+  <ion-navbar color="woodson">
+    <ion-title>{{ item["Title"] }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- Displays artwork image and metadata. Artist's name is bold, and artwork caption is italicizd. -->
+<ion-content padding>
+  <img class="artwork" src="assets/images/{{ item['BIA 40'] }}.jpg" />
+  <p><b>{{ item["First Name"] }}&nbsp;{{ item["Last Name"] }}</b>, {{ item["Nationality"] }}, {{ item["Life Dates"] }}</p>
+  <p><i>{{ item["Title"] }}</i>, {{ item["Year"] }}</p>
+  <p>{{ item["Species"] }}</p>
+  <p>{{ item["Medium"] }} on {{ item["Support"] }}</p>
+  <p>{{ item["Unframed Dimensions"] }}</p>
+  <p>{{ item["Source of Acquisition"] }}</p>
+  <p>{{ item["Birds in Art anniversary"] }}</p>
+</ion-content>

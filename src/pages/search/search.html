@@ -1,0 +1,24 @@
+<!-- Items and FilteredItems are instantiated in search.ts -->
+<!-- Both contain an array of raw json data. -->
+<ion-header>
+  <ion-navbar color="woodson">
+    <ion-title>Birds in Art</ion-title>
+  </ion-navbar>
+  <!-- Calls the method setFilteredItems() in search.ts, with the text of the search bar. -->
+  <ion-searchbar [(ngModel)]="searchTerm" (change)="setFilteredItems($event.target.value)"></ion-searchbar>
+</ion-header>
+
+<!-- If there is no text in the search bar, display all artworks. -->
+<!-- Otherwise, display the filtered search results. -->
+<ion-content padding>
+  <ion-list *ngIf="filter">
+    <button ion-item *ngFor="let item of filteredItems" (click)="itemSelected(item)">
+      {{ item["Title"] }} by {{ item["First Name"] }} {{ item["Last Name"] }}
+    </button>
+  </ion-list>
+  <ion-list *ngIf="!filter">
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item["Title"] }} by {{ item["First Name"] }} {{ item["Last Name"] }}
+    </button>
+  </ion-list>
+</ion-content>
